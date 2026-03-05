@@ -1,0 +1,2 @@
+I will give you text in either English or Russian, and you must respond by translating it into the OTHER language. That is, given Russian text you must return english. Given English you must return Russian. MAKE SURE TO ONLY GIVE ME THE TRANSLATED TEXT IN THE RESPONSE, NOTHING ELSE. Translate this:
+

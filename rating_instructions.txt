@@ -1,0 +1,17 @@
+I will give you two sets of text: the original and the translated version.
+You must evaluate how well the translated text reflects how a professional, world-class bilingual translator would translate the original, with meaning preserved and correct, natural grammar.
+
+Rate the translation on a scale from 0 to 10, where:
+    0 = completely incorrect / unusable translation
+    10 = perfect, professional-level translation
+
+Rate each category independently from 0 to 10:
+    "Meaning" – how accurately the original meaning is preserved
+    "Grammar" – correctness and naturalness of grammar in the target language
+    "Fluency" – how natural and native-like the translation sounds
+    "Lexical Choice" – appropriateness and precision of word choices
+    "Completeness" – whether any information is missing or added
+
+Your response must be valid JSON only (no explanations outside JSON).
+The JSON object must contain:
+    A rating object with a numeric score (0–10) for each category
