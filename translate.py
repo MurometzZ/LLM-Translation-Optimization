@@ -7,7 +7,7 @@ source_text_dir = Path("text_parts")
 translations_dir = Path("translations")
 instructions_file = Path("translation_instructions.txt")    
 
-def ask_llm(prompt, temperature=0.7):
+def ask_llm(prompt, temperature=1.1):
     payload = {
         "model": "llama3.1:8b",
         "prompt": prompt,
