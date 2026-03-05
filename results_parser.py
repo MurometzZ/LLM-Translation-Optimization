@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-target_dir = Path("EN to RU/qwen3_8b/Crime and Punishment/Chapter_2/temp_1.2/ratings")
+target_dir = Path("EN to RU/llama3.1_8b/Crime and Punishment/Chapter_2/temp_0.7/ratings")
 
 def get_average(property):
     """
@@ -33,8 +33,8 @@ def get_average(property):
         print("No valid files found.")
 
 
-print("Meaning: ", get_average("Meaning"))
-print("Grammar: ", get_average("Grammar"))
-print("Fluency: ", get_average("Fluency"))
-print("Lexical Choice: ", get_average("Lexical Choice"))
-print("Completeness: ", get_average("Completeness"))
+print("Meaning: ", round(get_average("Meaning"), 4))
+print("Grammar: ", round(get_average("Grammar"), 4))
+print("Fluency: ", round(get_average("Fluency"), 4))
+print("Lexical Choice: ", round(get_average("Lexical Choice"), 4))
+print("Completeness: ", round(get_average("Completeness"), 4))

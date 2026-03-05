@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 # target_dir = Path("ratings")
-target_dir = Path("EN to RU/qwen3_8b/Crime and Punishment/Chapter_2/temp_1.2/ratings")
+target_dir = Path("EN to RU/llama3.1_8b/Crime and Punishment/Chapter_2/temp_0.3/ratings")
 
 # Canonical key mapping
 KEY_MAP = {
