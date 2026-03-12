@@ -28,7 +28,7 @@ def create_file(content, path: Path):
 with open("input.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
-chunks = split_text_into_chunks(text, sentences_per_chunk=5, overlap=1)
+chunks = split_text_into_chunks(text, sentences_per_chunk=10, overlap=1)
 
 for i, chunk in enumerate(chunks):
     create_file(chunk, source_text_dir / f"{i}.txt")
