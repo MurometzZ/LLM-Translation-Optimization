@@ -7,13 +7,13 @@ source_text_dir = Path("text_parts")
 translations_dir = Path("translations")
 instructions_file = Path("translation_instructions.txt")    
 
-def ask_llm(prompt, temperature=0.7):
+def ask_llm(prompt, temperature=0.6): # do 0.7 next 
     payload = {
-        "model": "qwen3:8b",
+        "model": "yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest",
         "prompt": prompt,
         "stream": False,
         "options": {
-            "thinking": False,
+            # "thinking": False,
             "temperature": temperature
         } 
     }
