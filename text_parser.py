@@ -2,13 +2,9 @@ import nltk
 from pathlib import Path
 from nltk.tokenize import sent_tokenize
 
-nltk.download("punkt")
-nltk.download("punkt_tab")
+nltk.download("punkt", quiet=True)
 
-source_text_dir = Path("text_parts")
-source_text_dir.mkdir(exist_ok=True)
-
-def split_text_into_chunks(text, sentences_per_chunk=5, overlap=1):
+def split_text_into_chunks(text, sentences_per_chunk=10, overlap=1):
     sentences = sent_tokenize(text)
     chunks = []
     start = 0
@@ -21,15 +17,22 @@ def split_text_into_chunks(text, sentences_per_chunk=5, overlap=1):
 
     return chunks
 
-def create_file(content, path: Path):
-    with path.open("w", encoding="utf-8") as f:
-        f.write(content)
 
-with open("input.txt", "r", encoding="utf-8") as f:
-    text = f.read()
+def parse(input_file_path: str, output_dir: str = "text_parts"):
+    input_path = Path(input_file_path)
+    output_path = Path(output_dir)
+    output_path.mkdir(exist_ok=True)
 
-chunks = split_text_into_chunks(text, sentences_per_chunk=10, overlap=1)
+    # Read input file
+    with input_path.open("r", encoding="utf-8") as f:
+        text = f.read()
 
-for i, chunk in enumerate(chunks):
-    create_file(chunk, source_text_dir / f"{i}.txt")
-    print(f"--- Chunk {i+1} ---\n{chunk}\n")
+    # Split into chunks
+    chunks = split_text_into_chunks(text)
+
+    # Write chunks to files
+    for i, chunk in enumerate(chunks):
+        with (output_path / f"{i}.txt").open("w", encoding="utf-8") as f:
+            f.write(chunk)
+
+    print(f"Created {len(chunks)} chunks in '{output_path}'")

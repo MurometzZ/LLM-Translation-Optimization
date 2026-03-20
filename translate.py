@@ -1,21 +1,22 @@
 from pathlib import Path
 import requests
-import json
 
 url = "http://localhost:11434/api/generate"
+
 source_text_dir = Path("text_parts")
 translations_dir = Path("translations")
-instructions_file = Path("translation_instructions.txt")    
+instructions_file = Path("translation_instructions.txt")
 
-def ask_llm(prompt, temperature=2.0): 
+
+def ask_llm(prompt, model, temperature):
     payload = {
-        "model": "yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest",
+        "model": model,
         "prompt": prompt,
         "stream": False,
         "options": {
             # "thinking": False,
             "temperature": temperature
-        } 
+        }
     }
 
     response = requests.post(url, json=payload)
@@ -29,13 +30,16 @@ def create_file_with_text(file_path, content):
     with file_path.open("w", encoding="utf-8") as f:
         f.write(content)
 
-instructions = instructions_file.read_text(encoding="utf-8") 
 
-for file in source_text_dir.glob("*.txt"):
-    content = file.read_text(encoding='utf-8')
-    answer = ask_llm(instructions + content)
-    
-    new_filepath = translations_dir / (file.stem + "_translation.txt")
+def translate(model: str, temperature: float):
+    instructions = instructions_file.read_text(encoding="utf-8")
 
-    create_file_with_text(new_filepath, answer)
-    print(answer)
+    for file in source_text_dir.glob("*.txt"):
+        content = file.read_text(encoding="utf-8")
+
+        answer = ask_llm(instructions + content, model, temperature)
+
+        new_filepath = translations_dir / (file.stem + "_translation.txt")
+        create_file_with_text(new_filepath, answer)
+
+        # print(f"Translated {file.name}")
