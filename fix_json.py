@@ -4,16 +4,16 @@ from pathlib import Path
 # target_dir = Path("RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_2.0/ratings")
 
 target_dirs = [
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_0.1/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_0.3/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_0.5/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_0.6/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_0.7/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_0.9/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_1.1/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_1.2/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_1.5/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/RusLTC_RU_1_94_1/temp_2.0/ratings"
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.1/ratings",
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.3/ratings",
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.5/ratings",
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.6/ratings",
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.7/ratings",
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.9/ratings",
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_1.1/ratings",
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_1.2/ratings",
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_1.5/ratings",
+    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_2.0/ratings"
 ]
 
 KEY_MAP = {
@@ -26,7 +26,7 @@ KEY_MAP = {
 }
 
 EXPECTED_KEYS = {
-    "Meaning",
+    "Meaning",  
     "Grammar",
     "Fluency",
     "Lexical Choice",
