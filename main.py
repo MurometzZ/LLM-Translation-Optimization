@@ -14,8 +14,8 @@ input_texts = ["RusLTC_EN_1_94.txt"]
 # text_source = "Wikipedia/Neural Networks" 
 #  0.1, 0.3, 0.5, 0.6, 0.7, 0.9, 1.1, 1.2, 1.5, 2.0
 # "yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest"
-models = ["qwen3:8b"] # Done: llama3.1:8b, qwen3:8b on 0.1, 0.3, 0.5, 0.6, 0.7, 0.9
-temps = [0.1, 0.3, 0.5, 0.6, 0.7, 0.9]
+models = ["yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest"] # Done: llama3.1:8b, qwen3:8b, 
+temps = [0.1, 0.3, 0.5, 0.6, 0.7, 0.9, 1.1, 1.2, 1.5, 2.0]
 
 log_file = Path("pipeline_progress.log")
 completed_work = []
