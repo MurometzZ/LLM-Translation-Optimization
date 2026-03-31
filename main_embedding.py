@@ -11,9 +11,9 @@ import embed
 # Configuration
 # -------------------------
 input_language = "EN"
-input_texts = ["RusLTC_EN_1_94 copy.txt"]
+input_texts = ["RusLTC_EN_1_94.txt"]
 
-models = ["llama3.1:8b"] # , "qwen3:8b", "yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest"
+models = ["llama3.1:8b", "qwen3:8b", "yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest"] # "llama3.1:8b", "qwen3:8b", "yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest"
 temp = 0.1
 
 generations = 10
