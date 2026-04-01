@@ -62,3 +62,7 @@ def rate(model: str = "gpt-oss:120b-cloud"):
             create_file_with_text(new_filepath, rating)
 
             print(f"Rated {translated_file_path.name}")
+
+
+if __name__ == "__main__":
+    rate()
