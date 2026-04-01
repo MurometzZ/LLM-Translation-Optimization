@@ -45,9 +45,9 @@ def rate(model: str = "gpt-oss:120b-cloud"):
             else:
                 original_text = "[Original text not found]"
 
-            print("Asking the following: \n" + instructions
-                + "\nHere is the original text:\n" + original_text
-                + "\nHere is the translated text:\n" + translated_text)
+            # print("Asking the following: \n" + instructions
+            #     + "\nHere is the original text:\n" + original_text
+            #     + "\nHere is the translated text:\n" + translated_text)
             
             # Ask the LLM for a rating
             rating = ask_cloud_llm(
