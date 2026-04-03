@@ -5,15 +5,7 @@ from pathlib import Path
 
 target_dirs = [
     "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.1/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.3/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.5/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.6/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.7/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_0.9/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_1.1/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_1.2/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_1.5/ratings",
-    "RU to EN/YandexGPT-5-Lite-8B-instruct-GGUF/Crime and Punishment/Chapter_2/temp_2.0/ratings"
+
 ]
 
 KEY_MAP = {
@@ -39,9 +31,7 @@ for target_dir in target_dirs:
             with open(file, "r", encoding="utf-8") as f:
                 data = json.load(f)
 
-            # ---------------------------------------------------
-            # Step 1: Detect rating block (case-insensitive)
-            # ---------------------------------------------------
+
             rating_source = None
 
             for key in data.keys():
@@ -57,9 +47,7 @@ for target_dir in target_dirs:
                 print(f"Skipped (invalid structure): {file.name}")
                 continue
 
-            # ---------------------------------------------------
-            # Step 2: Normalize metric keys
-            # ---------------------------------------------------
+
             fixed_rating = {}
 
             for key, value in rating_source.items():
@@ -67,16 +55,11 @@ for target_dir in target_dirs:
                 if normalized_key:
                     fixed_rating[normalized_key] = value
 
-            # ---------------------------------------------------
-            # Step 3: Validate required metrics exist
-            # ---------------------------------------------------
+
             missing = EXPECTED_KEYS - set(fixed_rating.keys())
             if missing:
                 print(f"Warning: {file.name} missing keys: {missing}")
 
-            # ---------------------------------------------------
-            # Step 4: Overwrite with canonical structure
-            # ---------------------------------------------------
             data_fixed = {"rating": fixed_rating}
 
             with open(file, "w", encoding="utf-8") as f:
