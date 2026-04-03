@@ -10,7 +10,7 @@ import check_translations
 # Configuration
 # -------------------------
 input_language = "EN"
-input_texts = ["RusLTC_EN_1_94.txt"]
+input_texts = ["input.txt"]
 # text_source = "Wikipedia/Neural Networks" 
 #  0.1, 0.3, 0.5, 0.6, 0.7, 0.9, 1.1, 1.2, 1.5, 2.0
 # "yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest"
