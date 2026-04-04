@@ -13,7 +13,7 @@ import embed
 input_language = "RU"
 input_texts = ["input.txt"]
 
-models = ["llama3.1:8b", "qwen3:8b"] # "llama3.1:8b", "qwen3:8b", "yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest"
+models = ["yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest"] # "llama3.1:8b", "qwen3:8b", "yandex/YandexGPT-5-Lite-8B-instruct-GGUF:latest"
 temp = 0.1
 
 generations = 10
