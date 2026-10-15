@@ -6,8 +6,7 @@ Official code for **"Evaluating 8B-Parameter LLMs for English-Russian Translatio
 
 [Paper (PDF)](https://www.curieuxreview.com/_files/ugd/60ed3c_f30d24aafaaf400cbf1a70353900f0a2.pdf)
 
-<!-- TODO: add an overview figure from the paper -->
-<!-- ![Overview](assets/overview.png) -->
+[![First page of the paper](images/firstpage.png)](https://www.curieuxreview.com/_files/ugd/60ed3c_f30d24aafaaf400cbf1a70353900f0a2.pdf)
 
 ## Summary
 This work evaluates how well 8B-parameter large language models translate between English and Russian, and tests methods for improving their performance.
