@@ -49,6 +49,12 @@ Note: due to the inherent randomness of LLMs, results may vary slightly.
 - Evaluation dataset(s): Crime and Punishment by Fyodor Dostoevsky, RusLTC article pair (RusLTC_EN_1_94 and RusLTC_RU_1_94_1)
 - Metrics: 0 to 10 rating system, with large cloud LLM used to rate translations
 
+## Results
+![Results](images/results.png)
+
+Aside from the performance diffrences between models, the study also found that Russian-to-English translation yielded higher-quality results compared to English-to-Russian translation.
+The dataset also had a significant effect on the translation results. All tested models tend to score higher on translations of modern text instead of classical literature. 
+
 ## Inner workings
 ```python
   # Example of how basic temperature testing was executed  
